@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  web:
+    build: ./litespeed
+    ports:
+      - "8080:80"
+      - "7080:7080"
+      - "8443:443"
+      - "8088:8088"
+    volumes:
+      - ./laravel:/var/www/laravel
